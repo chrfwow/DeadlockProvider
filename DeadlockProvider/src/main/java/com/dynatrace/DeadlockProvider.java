@@ -28,6 +28,8 @@ public class DeadlockProvider extends EventProvider {
 
                 // This line deadlocks:
                 emitProviderReady(ProviderEventDetails.builder().build());
+                // This does not:
+                new Thread(() -> emitProviderReady(ProviderEventDetails.builder().build())).start();
             }
         }
     }
