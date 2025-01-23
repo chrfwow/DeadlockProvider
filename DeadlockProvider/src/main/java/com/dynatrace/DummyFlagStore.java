@@ -14,6 +14,7 @@ public class DummyFlagStore {
     }
 
     public void init() {
+        // run init in a new thread, that does not have the monitor on this
         new Thread(() -> {
 
             try {

@@ -8,7 +8,7 @@ public class DeadlockTest {
         OpenFeatureAPI.getInstance().setProviderAndWait(deadlockProvider);
         //deadlockProvider.initialize(new ImmutableContext());
 
-        System.out.println("Deadlock provider created");
+        System.out.println("No deadlock!!!!!");
 
         Thread.sleep(50000);
 
