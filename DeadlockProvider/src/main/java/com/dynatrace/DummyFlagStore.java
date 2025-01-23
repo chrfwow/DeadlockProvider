@@ -17,7 +17,7 @@ public class DummyFlagStore {
         new Thread(() -> {
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

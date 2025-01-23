@@ -25,6 +25,8 @@ public class DeadlockProvider extends EventProvider {
         synchronized (dummyFlagStore) {
             if (providerEvent == ProviderEvent.PROVIDER_READY) {
                 dummyFlagStore.setReady();
+
+                // This line deadlocks:
                 emitProviderReady(ProviderEventDetails.builder().build());
             }
         }
